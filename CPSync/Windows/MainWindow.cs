@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Numerics;
 using Dalamud.Bindings.ImGui;
 using Dalamud.Interface.Textures;
@@ -50,7 +50,7 @@ public class MainWindow : Window, IDisposable
             if (child.Success)
             {
                 ImGui.Text("Have a goat:");
-                var goatImage = Plugin.TextureProvider.GetFromFile(iconImagePath).GetWrapOrDefault();
+                var goatImage = CPSync.TextureProvider.GetFromFile(iconImagePath).GetWrapOrDefault();
                 if (goatImage != null)
                 {
                     using (ImRaii.PushIndent(55f))
@@ -68,7 +68,7 @@ public class MainWindow : Window, IDisposable
                 // Example for other services that Dalamud provides.
                 // PlayerState provides a wrapper filled with information about the player character.
 
-                var playerState = Plugin.PlayerState;
+                var playerState = CPSync.PlayerState;
                 if (!playerState.IsLoaded)
                 {
                     ImGui.Text("Our local player is currently not logged in.");
@@ -90,7 +90,7 @@ public class MainWindow : Window, IDisposable
                 
                 // Get the icon id from a known offset + the class jobs id
                 var jobIconId = 62100 + playerState.ClassJob.RowId;
-                var iconTexture = Plugin.TextureProvider.GetFromGameIcon(new GameIconLookup(jobIconId)).GetWrapOrEmpty();
+                var iconTexture = CPSync.TextureProvider.GetFromGameIcon(new GameIconLookup(jobIconId)).GetWrapOrEmpty();
                 ImGui.Image(iconTexture.Handle, new Vector2(28, 28) * ImGuiHelpers.GlobalScale);
                 
                 ImGui.SameLine();
@@ -103,8 +103,8 @@ public class MainWindow : Window, IDisposable
                 ImGui.Text($" [Level {playerState.Level}]");
                 
                 // Example for querying Lumina, getting the name of our current area.
-                var territoryId = Plugin.ClientState.TerritoryType;
-                if (Plugin.DataManager.GetExcelSheet<TerritoryType>().TryGetRow(territoryId, out var territoryRow))
+                var territoryId = CPSync.ClientState.TerritoryType;
+                if (CPSync.DataManager.GetExcelSheet<TerritoryType>().TryGetRow(territoryId, out var territoryRow))
                 {
                     ImGui.Text($"Current location:");
                     ImGui.SameLine(120 * ImGuiHelpers.GlobalScale);
