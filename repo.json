@@ -1,8 +1,8 @@
 [
     {
         "Author": "NaughtyNeko",
-        "Name": "NNekoTemplate",
-        "InternalName": "NNekoTemplate",
+        "Name": "CPSync",
+        "InternalName": "CPSync",
         "Version":"0.0.0.0",
         "AssemblyVersion":"0.0.0.0",
         "ApplicableVersion": "any",
@@ -11,14 +11,14 @@
         "LoadRequiredState": 0,
         "IsHide": "False",
         "IsTestingExclusive": "False",
-        "Punchline": "NNekoTemplate",
-        "Description": "NNekoTemplate",
+        "Punchline": "CPSync",
+        "Description": "CPSync",
         "Tags": [ "NNeko", "NaughtyNeko", "Other" ],
         "CategoryTags": [ "Other" ],
-        "IconUrl": "https://github.com/NNekoPlugins/NNekoTemplate/Data/NNeko.png",
-        "RepoUrl": "https://github.com/NNekoPlugins/NNekoTemplate",
-        "DownloadLinkInstall": "https://github.com/NNekoPlugins/NNekoTemplate/releases/download/v0.0.0.0/latest.zip",
-        "DownloadLinkTesting": "https://github.com/NNekoPlugins/NNekoTemplate/releases/download/v0.0.0.0/latest.zip",
-        "DownloadLinkUpdate": "https://github.com/NNekoPlugins/NNekoTemplate/releases/download/v0.0.0.0/latest.zip"
+        "IconUrl": "https://github.com/NNekoPlugins/CPSync/Data/NNeko.png",
+        "RepoUrl": "https://github.com/NNekoPlugins/CPSync",
+        "DownloadLinkInstall": "https://github.com/NNekoPlugins/CPSync/releases/download/v0.0.0.0/latest.zip",
+        "DownloadLinkTesting": "https://github.com/NNekoPlugins/CPSync/releases/download/v0.0.0.0/latest.zip",
+        "DownloadLinkUpdate": "https://github.com/NNekoPlugins/CPSync/releases/download/v0.0.0.0/latest.zip"
     }
 ]

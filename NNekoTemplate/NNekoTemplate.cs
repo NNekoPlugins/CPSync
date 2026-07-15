@@ -4,11 +4,11 @@ using Dalamud.Plugin;
 using System.IO;
 using Dalamud.Interface.Windowing;
 using Dalamud.Plugin.Services;
-using NNekoTemplate.Windows;
+using CPSync.Windows;
 
-namespace NNekoTemplate;
+namespace CPSync;
 
-public sealed class NNekoTemplate : IDalamudPlugin
+public sealed class CPSync : IDalamudPlugin
 {
     [PluginService] internal static IDalamudPluginInterface PluginInterface { get; private set; } = null!;
     [PluginService] internal static ITextureProvider TextureProvider { get; private set; } = null!;
@@ -22,7 +22,7 @@ public sealed class NNekoTemplate : IDalamudPlugin
 
     public Configuration Configuration { get; init; }
 
-    public readonly WindowSystem WindowSystem = new("NNekoTemplate");
+    public readonly WindowSystem WindowSystem = new("CPSync");
     private ConfigWindow ConfigWindow { get; init; }
     private MainWindow MainWindow { get; init; }
 
@@ -56,7 +56,7 @@ public sealed class NNekoTemplate : IDalamudPlugin
 
         // Add a simple message to the log with level set to information
         // Use /xllog to open the log window in-game
-        // Example Output: 00:57:54.959 | INF | [NNekoTemplate] ===A cool log message from Sample Plugin===
+        // Example Output: 00:57:54.959 | INF | [CPSync] ===A cool log message from Sample Plugin===
         Log.Information($"=== Meowhoo from {PluginInterface.Manifest.Name}! ===");
     }
 
