@@ -15,10 +15,7 @@ Automatically switches to the Customize+ profile linked to your active Glamourer
 ---
 
 ## About 
-
-
-## Features
-
+Based loosely on the now defunct CustomizeBridge plugin.
 
 ## Installation
 > **Warning**  
